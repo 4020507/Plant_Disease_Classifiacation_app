@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--TipFragment 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/back"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0"
+                android:text="Back"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000000"
+                app:backgroundTint="#00000000"
+                app:icon="@drawable/abc_vector_test"
+                app:iconTint="#000000" />
+
+            <TextView
+                android:id="@+id/login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tip!"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/tip1"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round"
+                    android:text="Disease"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="#BE395C2D"
+                    app:backgroundTint="#9CC6E4BA" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignBottom="@+id/tip1"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginBottom="-30dp"
+                    android:background="@drawable/round"
+                    app:backgroundTint="#BE395C2D" />
+
+                <Button
+                    android:id="@+id/tip2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_alignBottom="@+id/tip1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginBottom="-320dp"
+                    android:background="@drawable/round"
+                    android:text="Flowers"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="#C4F0F8ED"
+                    app:backgroundTint="#BE395C2D" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignBottom="@+id/tip2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="149dp"
+                    android:layout_marginBottom="140dp"
+                    android:background="@drawable/round"
+                    app:backgroundTint="#ADE9FDE1" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/back"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="0"
+            android:text="Back"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000000"
+            app:backgroundTint="#00000000"
+            app:icon="@drawable/abc_vector_test"
+            app:iconTint="#000000" />
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+    <!--MarketFragment 레이아웃-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <ImageView
+                android:id="@+id/medicine"
+                android:layout_width="250dp"
+                android:layout_height="170dp"
+                android:background="@drawable/rounding"
+                android:src="@drawable/fertilizer1"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/medicine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Fertilizer"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/medicine"
+                />
+            <ImageView
+                android:id="@+id/fertilizer"
+                android:layout_width="250dp"
+                android:layout_height="170dp"
+                android:src="@drawable/medicine3"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/fertilizer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Medicine"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/fertilizer"
+                />
+            <ImageView
+                android:id="@+id/pot"
+                android:layout_width="250dp"
+                android:layout_height="170dp"
+                android:src="@drawable/pots1"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/pot_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Nuturition"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/pot"
+                />
+            <TextView
+                android:id="@+id/pot2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="$250"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@id/pot_name"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 그러데이션 적용 -->
+    <gradient
+        android:startColor="#D9ECC3"
+        android:centerColor="#FFFFFF"
+        android:endColor="#FFFFFF"
+        android:angle="90"
+        android:centerY="0.5"
+        />
+
+    <corners android:radius="0dp"/>
+
+</shape>
