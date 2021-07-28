@@ -57,6 +57,7 @@ public class CommentDetailFragment extends Fragment implements onBackPressedList
 
         bundle = MainActivity.mbundle;
 
+        //bring contents from the community activity, and show them
         String t = bundle.getString("title");
         String c = bundle.getString("contents");
         byte[] a = bundle.getByteArray("image");
@@ -79,6 +80,7 @@ public class CommentDetailFragment extends Fragment implements onBackPressedList
 
         listView = (ListView) rootView.findViewById(R.id.listView);
 
+        //bring comments
         CommentTable.openDatabase(getContext(),"position"+position);
         CommentTable.createTable("position"+position);
         cursor =CommentTable.selectData("position"+position);
@@ -96,6 +98,7 @@ public class CommentDetailFragment extends Fragment implements onBackPressedList
         cursor = CommentTable.selectData("position"+position);
         cursor.moveToNext();
 
+        //write comments, and show with writer's id
         comment = (EditText) rootView.findViewById(R.id.comment);
         confirm = (Button) rootView.findViewById(R.id.confirm);
         confirm.setOnClickListener(new View.OnClickListener() {

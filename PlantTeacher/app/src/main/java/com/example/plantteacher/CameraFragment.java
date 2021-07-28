@@ -51,6 +51,7 @@ public class CameraFragment extends Fragment {
         return rootView;
     }
 
+    //take a picture
     public void capture(){
         surfaceView.capture(new Camera.PictureCallback() {
             @Override

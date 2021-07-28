@@ -65,7 +65,7 @@ public class CommunityActivity extends Fragment implements onBackPressedListener
         login_cursor =LogInTable.selectData("logIn");
         login_cursor.moveToNext();
 
-
+        //view notices
         if(community_cursor.getCount() !=0)
         {
             for(int i = 0;i<community_cursor.getCount();i++)
@@ -77,6 +77,7 @@ public class CommunityActivity extends Fragment implements onBackPressedListener
 
         listView.setAdapter(adapter);
 
+        //click a specific notice, go to the commentdetailFragment to see detail
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -104,6 +105,7 @@ public class CommunityActivity extends Fragment implements onBackPressedListener
             }
         });
 
+        //post a new notice, go to writeActivity
         write = (TextView) rootView.findViewById(R.id.write);
 
         write.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +121,6 @@ public class CommunityActivity extends Fragment implements onBackPressedListener
     public void onBackPressed() {
         Intent intent = new Intent(getContext(),MainActivity.class);
         startActivity(intent);
-        getActivity().finish();
     }
 
     class CommunityAdapter extends BaseAdapter

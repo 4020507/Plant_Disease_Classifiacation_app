@@ -58,6 +58,8 @@ public class FertilizerFragment extends Fragment implements onBackPressedListene
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) getLayoutInflater().inflate(R.layout.fertilizer_fragment, container, false);
+
+        //show products
         product1 = (ImageView) rootView.findViewById(R.id.product1);
         product1_name = (TextView) rootView.findViewById(R.id.product1_name);
         product1_prize = (TextView) rootView.findViewById(R.id.product1_prize);

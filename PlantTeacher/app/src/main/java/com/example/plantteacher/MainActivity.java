@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //click a specific icon, and enter the menu
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -179,6 +180,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Premium service confirmation, 1 is yes,
+        if(SplashActivity.premiumViewModel.getIsPremium() == 1)
+        {
+            premium.setBackgroundResource(R.drawable.linear_border_smooth_orange);
+        }
+        else
+            premium.setBackgroundResource(R.drawable.premium);
 
         if(mbundle != null)
         {
@@ -312,6 +320,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(message == "premium")
                 {
+                    SplashActivity.premiumViewModel.setIsPremium(1);
                     premium.setBackgroundResource(R.drawable.linear_border_smooth_orange);
                     notice();
                 }
@@ -327,6 +336,7 @@ public class MainActivity extends AppCompatActivity {
                 else if(message == "premium")
                 {
                     premium.setBackgroundResource(R.drawable.premium);
+                    SplashActivity.premiumViewModel.setIsPremium(0);
                 }
             }
         });

@@ -83,8 +83,6 @@ public class Tip1Fragment extends Fragment implements onBackPressedListener{
                 //onChangedFragment는 창 전환하기 위한 함수. MainActivity에 있음. 번호 13은 tipExplainFragment로 전환하기 위한 번호
                 //bundle은 각 title, contents, image를 tipExpainFragment로 전송하기 위해
                 mainActivity.onChangedFragment(14,bundle);
-
-                //tip3,tip4등 더 추가가 필요할 경우, drawable만 바꾸고 위의 코드를 그대로 복사 붙인다면 버튼을 눌렀을 때 관련 정보가 그대로 나타나게 됨
             }
         });
 

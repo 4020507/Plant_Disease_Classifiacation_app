@@ -57,6 +57,7 @@ public class TipFragment extends Fragment implements onBackPressedListener{
             }
         });
 
+        //same as tip1, need to add tips
         tip2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

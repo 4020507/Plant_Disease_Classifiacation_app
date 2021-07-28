@@ -21,6 +21,8 @@ import java.util.PriorityQueue;
 import kotlin.jvm.internal.Intrinsics;
 
 public final class Classfier {
+
+    //classify plant diseases
     private Interpreter INTERPRETER;
     private List LABEL_LIST;
     private int INPUT_SIZE;
@@ -41,6 +43,7 @@ public final class Classfier {
         return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
     }
 
+    //list of platns diseases
     private List loadLabelList() {
 
         List classes = new ArrayList<>();
@@ -132,7 +135,8 @@ public final class Classfier {
 
     private final List getSortedResult(float[][] labelProbArray) {
 
-        PriorityQueue pq = new PriorityQueue(MAX_RESULTS);//여기 수정
+        //get the best result
+        PriorityQueue pq = new PriorityQueue(MAX_RESULTS);
 
         int recognitionsSize;
         for(int i = 0;i<LABEL_LIST.size();i++)

@@ -53,6 +53,7 @@ public class MentorFragment extends Fragment implements onBackPressedListener{
         listView = (ListView) rootView.findViewById(R.id.listView);
         adapter =new MentorAdapter();
 
+        //click any experts you want to take an advice
         adapter.addItem(new Mentoritem("Expert1"));
         adapter.addItem(new Mentoritem("Expert2"));
         adapter.addItem(new Mentoritem("Expert3"));

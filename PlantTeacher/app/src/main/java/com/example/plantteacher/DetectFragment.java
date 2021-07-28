@@ -64,6 +64,7 @@ public class DetectFragment extends Fragment implements onBackPressedListener{
         ViewGroup rootView = (ViewGroup) getLayoutInflater().inflate(R.layout.detect_fragment, container, false);
         file = new File(Environment.getExternalStorageDirectory(),"capture.jpg");
 
+
         try {
             mClassfier = new Classfier(mainActivity.getAssets(),mModelPath,mInputSize);
         } catch (IOException e) {
@@ -71,6 +72,7 @@ public class DetectFragment extends Fragment implements onBackPressedListener{
         }
         imageView = (ImageView) rootView.findViewById(R.id.imageView);
 
+        //take a photo
         photo = (Button) rootView.findViewById(R.id.photo);
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +83,7 @@ public class DetectFragment extends Fragment implements onBackPressedListener{
             }
         });
 
+        //bring a file
         gallery = (Button) rootView.findViewById(R.id.gallery);
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +97,8 @@ public class DetectFragment extends Fragment implements onBackPressedListener{
 
         detect = (Button) rootView.findViewById(R.id.detect);
         result = (TextView) rootView.findViewById(R.id.result);
+
+        //check if the plant get a disease
         detect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

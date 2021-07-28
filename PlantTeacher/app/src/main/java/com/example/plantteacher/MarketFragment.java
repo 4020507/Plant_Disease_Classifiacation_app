@@ -42,6 +42,7 @@ public class MarketFragment extends Fragment implements onBackPressedListener{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) getLayoutInflater().inflate(R.layout.market_fragment, container, false);
 
+        //categories of products
         medicine = (ImageView) rootView.findViewById(R.id.medicine);
         medicine.setClipToOutline(true);
         medicine.setOnClickListener(new View.OnClickListener() {
